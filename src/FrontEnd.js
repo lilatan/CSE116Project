@@ -8,9 +8,12 @@
 // mockup is a static image or drawing. The idea is that this mockup will become your actual
 // front-end once the buttons connect to JavaScript code and a server.
 
-var players = {}
-for (player in players){
-    var id = parseInt(Math.random())
-    players[player] = id
-}
+// var players = [];
+// function addPlayer(name, id){
+//     var player = {
+//         var id: id,
+//         var name: name,
+//         var score: 0,
+//     }
+// }
 
