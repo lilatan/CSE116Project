@@ -1,0 +1,96 @@
+Notes from Lab Activity 1:
+Project Conditions:
+1. Your project will be a massively multiplayer web application (MMO)
+○ For this project we will define MMO as a multiplayer experience that has no
+inherent upper limit to the number of simultaneous users (Ex. Chess, Football,
+and Poker all have upper limits on simultaneous players and web versions of
+these games would not qualify as MMOs)
+○ For full credit it should be possible for everyone in class to use your app
+during lecture (This will be a reality for select projects during the last week of
+lectures)
+2. Your users interact with each other in real-time
+○ We will consider your idea to be real-time if your users would notice a
+difference in the user experience if there were a delay of 1 second in the app
+○ The simplest way to meet this criteria may be to make a real-time game
+where all players share a game world and can see/interact with each other
+(Ex. Minecraft)
+○ An idea that would not meet this criteria is a standard social media site or
+messaging app. The user experience would only negligible be affected by a 1
+second delay and most users would not notice the delay at all.
+
+Project Architecture
+By the end of the semester you will build an application comprising of:
+1. A server that will maintain the state of your application and allows users to interact
+with each other [Any language*]
+2. A web front end [JavaScript/HTML/CSS]
+3. A networked desktop front end that can run on a different machine than your server
+[Any language*]
+*You may use languages not covered in this course
+
+With this architecture you will have a single server that will maintain the state of your
+application and allow users to interact (The model in the MVC pattern). The web and
+desktop front ends will both connect to the same server. As an example, if you are making a
+game and a player using the desktop front end moves their character your code will send
+that movement to the server, the server will update the state of the game to reflect this
+movement, then send that game state (via websockets) to all web and desktop users where
+the GUIs will be updated and all players see the movement.
+
+While all of the concepts needed will be covered in class, they might not be covered in your
+chosen languages and your team should expect to have to find libraries and study
+documentation on your own to complete your project. For example, we will not cover web
+servers in Scala so if you choose Scala for your server you will have to choose and setup a
+Scala web framework.
+
+Notes from Lab Activity 2:
+Pull commits: To download the latest changes made by your teammates you should
+pull their commits using the blue arrow, or clicking VCS -> git -> pull. You should pull
+often when working on your project to ensure your code is compatible with your
+teammates contributions
+
+To share code using git we’ll go through 3 steps, though IntelliJ simplifies this process:
+1. Add files: This tells git that it should be tracking changes made to the files that are
+added. IntelliJ typically asks if you want add a file to git whenever you create a new
+file
+2. Commit changes: This tells git that it should sync any changes made to all added
+files in your copy of the repository on your laptop. Whenever you commit you will be
+asked to write a commit message about the changes you’ve made
+3. Push commits: To share your changes with your team you will push your commits to
+GitHub. Any commits that are not pushed cannot be seen by your team so be sure to
+push when you commit. IntelliJ has a commit and push option which can be used to
+avoid a click. If you commit without pushing go to VCS -> git -> push to push
+
+Find the green check mark in the menu and click this to share your code
+i. Write a meaningful commit message when asked
+ii. Select commit and push to share your changes with your team
+https://www.jetbrains.com/help/idea/commit-and-push-changes.html
+
+Project Demo 1 Notes:
+100 points - Completed the task chosen in Lab Activity 1. INDIVIDUAL GRADING FOR DEMO 1
+Examples:
+Front-End Mockup - Front-end is written using web technologies and clearly represents
+that final app. A non-technical user will understand the full idea of the app without
+explanation from the team.
+Back-End Functionality - All three functions/methods implemented, appear to be correct,
+are passing the unit tests, and the unit test thoroughly test this functionality.
+Server Networking - The server runs and has the appropriate endpoints to implement the
+chosen feature and it is thoroughly tested
+
+LOOKING AHEAD:
+For project demo 2 your team will develop and demo a working desktop application with no
+networking and no multiplayer. This will be written entirely in your server language(s) and
+can run as a single application on a single machine.
+For project demo 3 your team will add, and demo, the web front-end and the networked
+desktop front-end and show that they are connecting to the same server. For the demo it is
+acceptable for all three parts of the app to run on a single machine, but you must prove that
+it would still work if all three parts were on different machines. This way you don’t have find a
+server to host your app and deploy it for the demo, though it’s highly recommended that you
+do so you can show off and use your app.
+
+While developing your local app for demo 2 it is highly recommended that you follow the
+MVC design pattern by keeping your GUI separate from your game logic and then
+communicating between them using JSON strings. This may create more work during part 2,
+but will make part 3 much easier when the GUI will run on a separate machine than the
+server. If these parts are already separated logically you can move the GUI to another
+project and send the JSON strings over the Internet with minimal other changes to get your
+desktop app working. This will give your team more time to work on the web front-end and all
+the complex networking that must to take place.
