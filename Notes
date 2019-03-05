@@ -1,7 +1,14 @@
+Project Idea Description:
+An online trivia game competition where for every question, there can only be one winner,
+and in the end, points are totaled up with the winner being the one with the most points. If there
+is not one clear winner, there are tie-breaker questions and will continue to do so until there is
+one winner. In terms of real-time, questions are each 15 seconds and whoever answers it first gets
+it. Each question gets 15 seconds to be answered, then the time ends for that question.
+
 Notes from Lab Activity 1:
 Project Conditions:
-1. Your project will be a massively multiplayer web application (MMO)
-○ For this project we will define MMO as a multiplayer experience that has no
+1. Your project will be a massively multi-player web application (MMO)
+○ For this project we will define MMO as a multi-player experience that has no
 inherent upper limit to the number of simultaneous users (Ex. Chess, Football,
 and Poker all have upper limits on simultaneous players and web versions of
 these games would not qualify as MMOs)
@@ -77,7 +84,7 @@ chosen feature and it is thoroughly tested
 
 LOOKING AHEAD:
 For project demo 2 your team will develop and demo a working desktop application with no
-networking and no multiplayer. This will be written entirely in your server language(s) and
+networking and no multi-player. This will be written entirely in your server language(s) and
 can run as a single application on a single machine.
 For project demo 3 your team will add, and demo, the web front-end and the networked
 desktop front-end and show that they are connecting to the same server. For the demo it is
