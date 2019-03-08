@@ -1,1 +1,24 @@
-dfewfew
+Make a leaderboard
+
+player teams
+
+Note:
+Have two sides (true or false)
+players are displayed as tiny circles that can move around the screen
+(part of CSS => Style)
+.circle {
+  height: 50px;
+  width: 50px;
+  background-color: #555;
+  border-radius: 50%;
+}
+
+They move to the side they think is right
+Time ends and people who got it wrong are kicked out
+remaining ppl keep answer questions and cycle keeps going till all the questions are answered.
+
+
+1. Player Name input
+2. Waiting Room
+3. Questions and True and False loaded
+4. Correct side highlighted
