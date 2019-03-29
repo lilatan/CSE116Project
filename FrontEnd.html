@@ -2,51 +2,79 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>CSE 116 Trivia</title>
+    <title>CSE 116: Trivia</title>
     <style>
-        h1 {text-align: center}
-        h2 {text-align: center}
-        .button1{
-            background-color: aqua;
-            text-align: left;
-            font-size: large;
-            margin: 100px 100px;
+        h1 {position: relative}
+        h2 {position: absolute}
+
+        /* Split the screen in half */
+        .split {
+            height: 50%;
+            width: 50%;
+            bottom: auto;
+            position: absolute;
+            z-index: 1;
+            top: 0;
+            overflow-x: hidden;
+            padding-top: 20px;
         }
-        .button2{
-            background-color: blueviolet;
-            text-align: left;
-            font-size: large;
-            margin: 100px 100px;
+
+        /* Control the left side */
+        .left {
+            left: 0;
+            background-color: darkslateblue;
         }
-        .button3{
-            background-color: crimson;
-            text-align: left;
-            font-size: large;
-            margin: 100px 100px;
+
+        /* Control the right side */
+        .right {
+            right: 0;
+            background-color: mediumspringgreen;
         }
-        .button4{
-            background-color: darkolivegreen;
-            text-align: left;
-            font-size: large;
-            margin: 100px 100px;
+
+        /* If you want the content centered horizontally and vertically */
+        .centered {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
         }
-        img {text-align: left}
-        img {text-align: right}
+
+        /* Style the image inside the centered container, if needed */
+        .centered img {
+            width: 150px;
+            border-radius: 50%;
+        }
+        .circle {
+            height: 50px;
+            width: 50px;
+            background-color: #555;
+            border-radius: 50%;
+        }
+
     </style>
 </head>
 <body style= "background-color: cornflowerblue;">
 
     <h1>CSE 116 Triviaaaaaaa</h1>
-    <h2>Question 1: What year was the modern pencil sharpener invented?</h2>
-    <button class = "button1">A) 1850</button>
-    <button class = "button2">B) 1847 </button> <!--Correct Answer-->
-    <button class = "button3">C) 1943</button>
-    <button class ="button4">D) 1852</button>
-    <img src="https://media1.fdncms.com/sacurrent/imager/u/original/11210600/1a890a81_trivia-night-grpahic.png" alt="Trivia Night Words Clip Art" style="float:left; width: 500px; height: 400px">
-    <img src="https://dumielauxepices.net/sites/default/files/drawn-question-mark-transparent-background-565123-9019370.png" alt="red button clip art" style="float:right; width: 700px; height: 400px">
-<!--Real-Time: Need Your users to interact with each other in real-time
-    - Players form teams?
-    -
-    -->
+    <h2>Question 1: The modern pencil sharpener was invented in 1847.</h2>
+    <!--TRUE-->
+
+
+    <div class="split left">
+        <div class="centered">
+            <img src="http://pluspng.com/img-png/circle-png-circle-png-hd-1600.png" alt="Circle">
+            <h2>True</h2>
+        </div>
+    </div>
+
+    <div class="split right">
+        <div class="centered">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/Transparent_X.png" alt="X">
+            <h2>False</h2>
+        </div>
+    </div>
+
+    <circle></circle>
 </body>
 </html>
