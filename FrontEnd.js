@@ -21,6 +21,10 @@ function preload () {
 }
 
 function create () {
+    this.add.image(400, 300, 'background');
+    this.add.image(200,200, 'Question');
+    this.add.image(150, 150, 'o');
+    this.add.image(150, 150, 'x');
     this.input.setDefaultCursor('url(images/pcircle.png), pointer');
     player = this.add.sprite(400, 300, 'player').setInteractive({ cursor: 'url(images/pcircle.png), pointer' });
     //the cursor is the player for each individual
