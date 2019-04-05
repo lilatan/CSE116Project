@@ -1,19 +1,36 @@
-//Using front-end web technologies (HTML/CSS/JavaScript) create a
-// mock front-end for your project as a prototype. This prototype does not have to have any
-// functionality or connect ot a server, but it must give someone unfamiliar with your project an
-// idea of what your team plans to build just by looking at your prototype. For example, you
-// might build the GUI for your app but none of the buttons do anything when clicked.
+var config = {
+    type: Phaser.AUTO,
+    width: 800,
+    height: 600,
+    scene: {
+        preload: preload,
+        create: create,
+        move: move
+    }
+};
 
-//You must use web technologies for the mockup. You will not receive credit if the entire
-// mockup is a static image or drawing. The idea is that this mockup will become your actual
-// front-end once the buttons connect to JavaScript code and a server.
+var game = new Phaser.Game(config);
+var player;
 
-// var players = [];
-// function addPlayer(name, id){
-//     var player = {
-//         var id: id,
-//         var name: name,
-//         var score: 0,
-//     }
-// }
+function preload () {
+    this.load.image('background', 'images/trivia-background.jpg');
+    this.load.image('Question', 'images/Question.png');
+    this.load.image('o', 'images/letter-o-block-capitals.png');
+    this.load.image('x','images/LETTERS_x.jpg');
+    this.load.image('player', 'images/pcircle.png');
+}
+
+function create () {
+    this.input.setDefaultCursor('url(images/pcircle.png), pointer');
+    player = this.add.sprite(400, 300, 'player').setInteractive({ cursor: 'url(images/pcircle.png), pointer' });
+    //the cursor is the player for each individual
+}
+
+function move(){
+    player.body
+    //set player to the corner or the bottom of the screen
+
+    //if player-cursor moves up, have it move up, vice versa
+
+}
 

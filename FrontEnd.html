@@ -2,79 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <script src="//cdn.jsdelivr.net/npm/phaser@3.16.2/dist/phaser.js"></script>
+    <script src="FrontEnd.js"></script>
     <title>CSE 116: Trivia</title>
-    <style>
-        h1 {position: relative}
-        h2 {position: absolute}
 
-        /* Split the screen in half */
-        .split {
-            height: 50%;
-            width: 50%;
-            bottom: auto;
-            position: absolute;
-            z-index: 1;
-            top: 0;
-            overflow-x: hidden;
-            padding-top: 20px;
-        }
-
-        /* Control the left side */
-        .left {
-            left: 0;
-            background-color: darkslateblue;
-        }
-
-        /* Control the right side */
-        .right {
-            right: 0;
-            background-color: mediumspringgreen;
-        }
-
-        /* If you want the content centered horizontally and vertically */
-        .centered {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            text-align: center;
-        }
-
-        /* Style the image inside the centered container, if needed */
-        .centered img {
-            width: 150px;
-            border-radius: 50%;
-        }
-        .circle {
-            height: 50px;
-            width: 50px;
-            background-color: #555;
-            border-radius: 50%;
-        }
-
-    </style>
 </head>
-<body style= "background-color: cornflowerblue;">
 
-    <h1>CSE 116 Triviaaaaaaa</h1>
-    <h2>Question 1: The modern pencil sharpener was invented in 1847.</h2>
-    <!--TRUE-->
+<body>
+    <div id="game"></div>
 
-
-    <div class="split left">
-        <div class="centered">
-            <img src="http://pluspng.com/img-png/circle-png-circle-png-hd-1600.png" alt="Circle">
-            <h2>True</h2>
-        </div>
-    </div>
-
-    <div class="split right">
-        <div class="centered">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/Transparent_X.png" alt="X">
-            <h2>False</h2>
-        </div>
-    </div>
-
-    <circle></circle>
 </body>
 </html>
+
