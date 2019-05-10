@@ -1,6 +1,6 @@
 import unittest
 import requests
-
+#server
 class endpointTest(unittest.TestCase):
     def test_something(self):
         r = requests.get('http://127.0.0.1:5000/players')
