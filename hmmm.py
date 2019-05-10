@@ -12,7 +12,7 @@ app.config.from_object(__name__)
 # enable CORS
 CORS(app)
 # sanity check route
-@app.route('/index', methods=['GET'])
+@app.route('/', methods=['GET'])
 def main():
     return jsonify('Hello World')
 
